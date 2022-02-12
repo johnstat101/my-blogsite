@@ -1,10 +1,10 @@
-from ensurepip import bootstrap
-import imp
 from flask import Flask
 from flask_bootstrap import Bootstrap
 from config import config_options
+from flask_simplemde import SimpleMDE
 
 bootstrap = Bootstrap()
+simple = SimpleMDE()
 
 def create_app(config_name):
 
@@ -15,6 +15,7 @@ def create_app(config_name):
 
     #initialize extensions
     bootstrap.init_app(app)
+    simple.init_app(app)
 
     # register blueprint
     from .main import main as main_blueprint
