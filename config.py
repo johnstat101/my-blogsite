@@ -9,6 +9,7 @@ class Config:
     SIMPLEMDE_JS_IIFE = True
     SIMPLEMDE_USE_CDN = True
 
+    SECRET_KEY = os.environ.get('SECRET_KEY')
     QUOTE_API_KEY = 'http://quotes.stormconsultancy.co.uk/random.json'
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://postgres:Njoro@localhost/watchlist'
 
@@ -28,7 +29,7 @@ class ProdConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
-    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://postgres:Njoro@localhost/watchlist'
 
 
 class TestConfig(Config):
