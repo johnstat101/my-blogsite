@@ -11,11 +11,12 @@ class config:
 
 class ProdConfig(config):
     '''Production Configuration'''
-    pass
+    DEBUG = True
 
 
 class TestConfig(Config):
     '''Test config'''
+    DEBUG = True
 
 
 class DevConfig(Config):
