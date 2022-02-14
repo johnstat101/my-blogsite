@@ -14,6 +14,10 @@ manager.add_command('server', Server)
 migrate = Migrate(app, db)
 manager.add_command('db', MigrateCommand)
 
+@app.before_first_request
+def create_tables():
+    db.create_all()
+
 @manager.command
 def test():
     """Run the unit tests."""
