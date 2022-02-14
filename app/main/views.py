@@ -4,7 +4,7 @@ from . import main
 from ..requests import get_quotes
 from ..email import mail_message
 from ..models import Blog, User, Comment, Subscriber
-from .forms import UpdateProfile, CommentForm, CreateBlog
+from .forms import UpdateProfile, CreateBlog
 from flask_login import login_required, current_user
 import markdown2
 
@@ -80,6 +80,8 @@ def new_blog():
         return redirect(url_for('main.index'))
         flash('You Posted a new Blog')
     return render_template('newblog.html', form = form)
+
+
 @main.route('/blog/<id>')
 def blog(id):
     comments = Comment.query.filter_by(blog_id=id).all()
@@ -121,7 +123,7 @@ def subscribe():
     email = request.form.get('subscriber')
     new_subscriber = Subscriber(email = email)
     new_subscriber.save_subscriber()
-    mail_message("Subscribed","email/welcome_subscriber",new_subscriber.email,new_subscriber=new_subscriber)
+    # mail_message("Subscribed","email/welcome_subscriber",new_subscriber.email,new_subscriber=new_subscriber)
     flash('Sucessfuly subscribed')
     return redirect(url_for('main.index'))
 
