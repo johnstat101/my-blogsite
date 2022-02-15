@@ -1,20 +1,20 @@
-# [News Preview Website](https://pitches-website.herokuapp.com/)
+# [BlogSite Preview Website](https://myblogs-webapp.herokuapp.com/)
 
 ## By John Kimani
 
 ## Description
 
-Pitches-website is an online Python-Flask application that allows users to create a one minute pitch. The application allows other signed-in users to view previous pitches, create their own, upvote or downvote a pitch.
+My-blogsite is an online Python-Flask application that allows users to create, edit and delete blogs. Users who are sign-in can comment on other Blogs. The application also allows users to subscribe to email alerts when a new blog has been posted by other users
 
 User Story:
 
-* see the pitches other people have posted.
-* vote on the pitch they liked and give it a downvote or upvote.
-* be signed in for him/her to leave a comment
-* view the pitches the user has created in my his/her profile page.
-* comment on the different pitches and leave feedback.
-* submit a pitch in any category
-* view the different categories
+* A user would like to view the blog posts on the site
+* A user would like to comment on blog posts
+* A user would like to view the most recent posts
+* A user would like to get an email alert when a new post is made by joining a subscription
+* A user would like to see random quotes on the site
+* A writer would like to sign in to the blog and create a blog from the application
+* A writer would like to delete comments, update or delete blogs
 
 ### Prerequisites
 
@@ -44,7 +44,7 @@ You need the following to start working on the project on your local computer:
 ```
 * Run ```chmod +x start.sh``` follwoed by ``` ./start.sh ``` while in the project folder to start the project.
 * Once started, the project can be accessed on your localhost using the address: ``` localhost:5000 ```.
-* Alternatively the application can be accessed by visiting https://pitches-website.herokuapp.com/
+* Alternatively the application can be accessed by visiting https://myblogs-webapp.herokuapp.com/
 
 ## Technologies Used
 
