@@ -84,6 +84,7 @@ def new_blog():
 
 
 @main.route('/blog/<id>')
+@login_required
 def blog(id):
     comments = Comment.query.filter_by(blog_id=id).all()
     blog = Blog.query.get(id)
