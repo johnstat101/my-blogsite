@@ -21,8 +21,8 @@
                             </p>
                             <h4><a href="{{url_for('main.blog',id = blog.id)}}">{{blog.title | upper}}</a></h4>
                             <p>{{blog.content}}</p>
-                            <p> <a class="btn btn-sm btn-info" href="{{url_for('main.blog',id = blog.id)}}"> Comment</a>
-                                <span class="btn btn-sm btn-primary">{{blog.comment.count()}} Comments</span>
+                            <p> <a class="btn btn-sm btn-info" href="{{url_for('main.blog',id = blog.id)}}">View...</a>
+                                <a class="btn btn-sm btn-primary" href="{{url_for('main.blog',id = blog.id)}}">{{blog.comment.count()}} Comments</a>
                             </p>
                         </div>
                     </div>
@@ -34,7 +34,7 @@
         </div>
 
         <div class="col-md-4">
-            <h3 style="background-color: rgb(221, 247, 199); padding: 4%;margin-top: 0%;">Today's Quote</h3>
+            <h3 style="background-color: rgb(221, 247, 199); padding: 4%;margin-top: 0%;"><i>Today's Quote</i></h3>
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h4>A quote by: <span style="color: blue">{{quote.author}}</span> </h4>
